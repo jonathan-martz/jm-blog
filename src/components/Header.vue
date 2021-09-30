@@ -5,7 +5,7 @@
         <router-link to="/"
           ><span class="text-xl text-blue-600">{</span>
           <span class="text-lg">JM Blog</span>
-          <span class="text-xl text-blue-600">}</span></router-link
+          <span class="text-xl text-blue-600">}</span>y</router-link
         >
       </div>
       <div class="col-span-1">
