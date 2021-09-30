@@ -2,7 +2,11 @@
   <div class="vc-header">
     <div class="grid grid-cols-3">
       <div class="col-span-2">
-        <span class="text-xl text-blue-600">{</span> <span class="text-lg">JM Blog</span> <span class="text-xl text-blue-600">}</span>
+        <router-link to="/"
+          ><span class="text-xl text-blue-600">{</span>
+          <span class="text-lg">JM Blog</span>
+          <span class="text-xl text-blue-600">}</span></router-link
+        >
       </div>
       <div class="col-span-1">
         <font-awesome-icon
