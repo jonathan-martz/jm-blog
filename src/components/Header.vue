@@ -4,20 +4,20 @@
       <div class="col-span-2">
         <router-link to="/"
           ><span class="text-xl text-blue-600">{</span>
-          <span class="text-lg">JM Blog</span>
-          <span class="text-xl text-blue-600">}</span>y</router-link
+          <span class="mx-2 text-lg text-white">JM Blog</span>
+          <span class="text-xl text-blue-600">}</span></router-link
         >
       </div>
       <div class="col-span-1">
         <font-awesome-icon
           v-if="$store.state.nav.toggle"
-          class="float-right"
+          class="float-right mt-2 text-white"
           @click="this.$store.commit('nav-toggle')"
           icon="times"
         />
         <font-awesome-icon
           v-if="!$store.state.nav.toggle"
-          class="float-right"
+          class="float-right mt-2 text-white"
           @click="this.$store.commit('nav-toggle')"
           icon="bars"
         />

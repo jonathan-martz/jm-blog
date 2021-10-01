@@ -1,7 +1,10 @@
 <template>
-  <div class="vc-breadcrumb px-3">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
+  <div class="px-3 vc-breadcrumb">
+    <nav>
+      <ol class="flex breadcrumb">
+        <li class="breadcrumb-item">
+          <router-link to="/" >Home</router-link>
+        </li>
         <li v-for="(item, index) in items" :key="index" class="breadcrumb-item">
           <router-link :to="item.to">{{ item.title }}</router-link>
         </li>
@@ -17,7 +20,7 @@ export default {
   name: "Breadcrumb",
   setup() {
     const store = useStore();
-    
+
     let items = computed(() => {
       return store.state.breadcrumb.items;
     });
@@ -28,3 +31,16 @@ export default {
   },
 };
 </script>
+<style lang="less" scoped>
+.breadcrumb-item {
+  &::after {
+    content: " > ";
+  }
+
+  &:last-child {
+    &::after {
+      content: "";
+    }
+  }
+}
+</style>

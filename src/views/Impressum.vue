@@ -120,3 +120,19 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  name:"ImpressumPage",
+  data() {
+    return {
+      
+    }
+  },
+  mounted() {
+    this.$store.commit("breadcrumb-add", {
+      title: "Impressum",
+      to: "/impressum",
+    });
+  },
+}
+</script>
