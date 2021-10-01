@@ -52,6 +52,7 @@ export default {
       // todo fix bug reset onload
       this.$store.commit("breadcrumb-reset");
       this.$store.commit("nav-reset");
+      this.$store.commit("messages-reset");
       window.scrollTo({top: 0, behavior: 'smooth'});
     },
   },

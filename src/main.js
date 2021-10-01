@@ -9,10 +9,13 @@ import localStorage from './plugins/localStorage'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars,faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faGithub,faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueMatomo from 'vue-matomo'
 
 
+library.add(faLinkedin)
+library.add(faGithub)
 library.add(faBars)
 library.add(faTimes)
 

@@ -8,7 +8,7 @@
         <strong>Jonathan Martz</strong><br />
         Hallo ich bin Jonathan und ich arbeite für die Ageon GmbH als Junior
         Fullstack Developer in Lohmar. Ich programmiere mittlerweile schon seit
-        fast 10 Jahren und habe meine Ausbildung 2019 in Karlsruhe bei der
+        fast 10 Jahren und habe meine Ausbildung 2020 in Karlsruhe bei der
         Flagbit GmbH abgeschlossen.
       </section>
       <footer class="px-2 py-2 mb-2 text-right">
