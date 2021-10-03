@@ -7,7 +7,7 @@ import Articels from '@/views/Articels.vue';
 const routes = [
     { path: '/', component: HomePage },
     { path: '/impressum', component: Impressum },
-    { path: '/news/:id', component: Articel },
+    { path: '/articel/:id', component: Articel },
     { path: '/articels', component: Articels },
 ]
 

@@ -18,7 +18,7 @@
       </main>
       <footer class="px-2 py-2 mb-2">
         <router-link
-          :to="'/news/' + articel.id"
+          :to="'/articel/' + articel.id"
           class="px-2 py-2 text-blue-100 bg-blue-600 border-blue-900 rounded hover:bg-blue-400 border-1"
           >mehr</router-link
         >

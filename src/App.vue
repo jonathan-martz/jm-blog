@@ -8,7 +8,7 @@
         </div>
       </div>
     </header>
-    <div v-if="messages" class="container max-w-5xl px-2 py-2 mx-auto">
+    <div v-if="messages.length > 0" class="container max-w-5xl px-2 py-2 mx-auto">
       <div class="grid grid-cols-1">
         <div id="messages" class="col-span-1 mt-2"><Messages></Messages></div>
       </div>
@@ -16,7 +16,9 @@
     <main>
       <div class="container max-w-5xl px-2 py-2 mx-auto mt-2 bg-gray-400 rounded-lg">
         <div class="grid grid-cols-1">
-          <div v-if="breadcrumbs" class="col-span-1 pt-2 pb-2"><Breadcrumb></Breadcrumb></div>
+          <div v-if="breadcrumbs" class="col-span-1 pt-2 pb-2">
+            <Breadcrumb></Breadcrumb>
+          </div>
           <div class="col-span-1 pt-2 pb-2"><router-view></router-view></div>
         </div>
       </div>
@@ -48,26 +50,27 @@ export default {
     NavContent,
   },
   watch: {
-    $route: function() {
+    $route: function () {
       // todo fix bug reset onload
       this.$store.commit("breadcrumb-reset");
       this.$store.commit("nav-reset");
       this.$store.commit("messages-reset");
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      window.scrollTo({ top: 0, behavior: "smooth" });
     },
   },
   computed: {
-    messages: function() {
+    messages: function () {
       return this.$store.state.messages.items;
     },
-    breadcrumbs: function() {
+    breadcrumbs: function () {
       return this.$store.state.breadcrumb.items;
     },
   },
   mounted() {
     this.$store.commit("breadcrumb-reset");
     this.$store.commit("message-add", {
-      text: "Willkommen auf meinem Blog. Hier findest du alle möglichen Artikel rund ums Programmieren.",
+      text:
+        "Willkommen auf meinem Blog. Hier findest du alle möglichen Artikel rund ums Programmieren.",
     });
   },
 };
@@ -76,15 +79,14 @@ export default {
 <style lang="less">
 @font-face {
   font-family: "Aldrich";
-  src:        url("assets/Aldrich-Regular.ttf") format("ttf");
+  src: url("assets/Aldrich-Regular.ttf") format("ttf");
 }
 
 .aldrich {
   font-family: "Aldrich";
 }
 
-
-a{
+a {
   color: #1f6fed;
 }
 </style>
