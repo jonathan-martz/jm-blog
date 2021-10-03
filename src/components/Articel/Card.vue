@@ -1,6 +1,6 @@
 <template>
   <div class="vc-articel-card">
-    <div class="mt-2 mr-2 bg-white border-2 border-black rounded card">
+    <div class="mt-2 mr-2 bg-white border-2 border-black rounded md:mt-0 card">
       <header>
         <router-link :to="'/news/' + articel.id"><img
           class="border-b border-black"

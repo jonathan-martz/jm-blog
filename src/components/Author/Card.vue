@@ -1,6 +1,6 @@
 <template>
   <div class="vc-author-card">
-    <div class="mt-2 mr-2 text-center bg-white border-2 border-black card">
+    <div class="mt-2 text-center bg-white border-2 border-black card">
       <header class="border-b border-black border-1">
         <img src="https://avatars.githubusercontent.com/u/20771653" />
       </header>
