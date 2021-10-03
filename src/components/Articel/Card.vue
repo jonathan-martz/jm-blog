@@ -2,14 +2,18 @@
   <div class="vc-articel-card">
     <div class="mt-2 mr-2 bg-white border-2 border-black rounded md:mt-0 card">
       <header>
-        <router-link :to="'/news/' + articel.id"><img
-          class="border-b border-black"
-          src="https://via.placeholder.com/600x380.png?text=Jmartz+Blog"
+        <router-link :to="'/news/' + articel.id"
+          ><img
+            v-if="articel.image"
+            class="border-b border-black"
+            :src="'https://admin.jmartz.blog' + articel.image.media.url"
         /></router-link>
       </header>
       <main class="px-2 py-2">
-        <strong>{{ articel.title }}</strong
-        ><br />
+        <h2>
+          <strong>{{ articel.title }}</strong>
+        </h2>
+        <br />
         {{ articel.desc }}
       </main>
       <footer class="px-2 py-2 mb-2">
@@ -27,16 +31,16 @@
 export default {
   name: "ArticelCard",
   data() {
-    return {articel:{}};
+    return { articel: {} };
   },
   methods: {
-    load: function() {
+    load: function () {
       let that = this;
-      fetch("https://admin.jmartz.blog/articels/"+this.identifier)
-        .then(function(response) {
+      fetch("https://admin.jmartz.blog/articels/" + this.identifier)
+        .then(function (response) {
           return response.json();
         })
-        .then(function(data) {
+        .then(function (data) {
           that.articel = data;
         });
     },
