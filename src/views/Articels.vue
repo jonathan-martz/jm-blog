@@ -5,7 +5,7 @@
         v-for="(item, index) in articels"
         :key="index"
         :identifier="item.id"
-        class="col-span-6 md:col-span-3 lg:col-span-2"
+        class="col-span-6 gap-2 mt-2 md:col-span-3 lg:col-span-2"
       ></articel-card>
     </div>
   </div>
