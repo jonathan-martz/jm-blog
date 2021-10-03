@@ -15,6 +15,7 @@
         </h2>
         <br />
         <p>{{ articel.desc }}</p>
+        <br />
         <div class="content" v-html="articel.content"></div>
       </div>
     </div>
