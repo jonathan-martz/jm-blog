@@ -13,6 +13,7 @@
         <h2>
           <strong>{{ articel.title }}</strong>
         </h2>
+        <br />
         <p>{{ articel.desc }}</p>
         <div class="content" v-html="articel.content"></div>
       </div>
